@@ -1,0 +1,31 @@
+# Site Settings
+title: "Ruang Komunal"
+url: ""
+baseurl: "" 
+permalinks: "/:categories/:year/:month/:day/:title/"
+
+# Build Settings
+markdown: kramdown
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile 
+  - Gemfile.lock
+
+# List of Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-archives
+
+# Plugin Configuration
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name'
