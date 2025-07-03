@@ -6,4 +6,5 @@ gem 'jekyll-seo-tag', '~> 2.8'
 gem 'sitemap_generator', '~> 6.3'
 gem 'jekyll-feed', '~> 0.17.0'
 gem 'jekyll-archives', '~> 2.3'
+gem 'wdm', '>= 0.1.0'
 end

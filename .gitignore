@@ -1,7 +1,8 @@
 # Jekyll files
-_site/          # The generated Jekyll site output
-.jekyll-cache/  # Jekyll's cache directory for faster builds
-.sass-cache/    # Sass cache directory
+_site          # The generated Jekyll site output
+_sass
+.jekyll-cache  # Jekyll's cache directory for faster builds
+.sass-cache    # Sass cache directory
 
 # Ruby-related files (often managed by Bundler)
 .bundle/        # Bundler's local gem installation directory (if you use `--path .bundle`)
