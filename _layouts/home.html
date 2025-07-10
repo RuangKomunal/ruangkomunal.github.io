@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="home">
+    <div class="header">{% include header.html %}</div>
+    <div class="homebody">
+        {% for post in site.posts limit:1 %}
+        <div class="recentpost">
+            <div class="rpimage"><a href="{{ post.url }}"><img src="{{ post.image }}"></a></div>
+            <div class="hmcategory"><a href="{{ post.category }}">{{ post.category }}</a></div>
+            <div class="rptitle"><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="rpexcerpt"><a href="{{ post.url }}">{{ post.content | truncatewords:25 }}</a></div>
+            <div class="rpdate-author">
+                <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a>
+                <a href="{{ post.url }}"><i class="bi bi-dash"></i></a>
+                <a href="{{ post.author }}">{{ post.author }}</a>
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="freshpost">
+        {% for post in site.posts offset:1 limit:2 %}
+            <div class="fpwarp">
+            <div class="fpimage"><a href="{{ post.url }}"><img src="{{ post.image }}"></a></div>
+            <div class="hmcategory"><a href="{{ post.category }}">{{ post.category }}</a></div>
+            <div class="fptitle"><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="hmdate-author">
+                <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a>
+                <a href="{{ post.url }}"><i class="bi bi-dash"></i></a>
+                <a href="{{ post.author }}">{{ post.author }}</a>
+            </div>
+            </div>
+        {% endfor %}
+        </div>
+
+        <div class="olderpost">
+        {% for post in site.posts offset:3 limit:5 %}
+            <div class="opcategory"><a href="{{ post.category }}">{{ post.category }}</a></div>
+            <div class="optitle"><a href="{{ post.url }}">{{ post.title }}</a></div>
+            <div class="hmdate-author">
+                <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a>
+                <a href="{{ post.url }}"><i class="bi bi-dash"></i></a>
+                <a href="{{ post.author }}">{{ post.author }}</a>
+            </div>
+        {% endfor %}
+        </div>
+        
+        <div class="otherpost">
+        <div class="otptext"><span>Karya Lainnya</span></div>
+        {% for post in site.posts offset:8 limit:5 %}
+        <div class="otpwhole">
+            <div class="otpleft">
+                <div class="otpimage"><img src="{{ post.image }}" alt="{{ post.alt }}"></div>
+            </div>
+            <div class="otpright">
+                <div class="otpcategory"><a href="{{ post.category }}">{{ post.category }}</a></div>
+                <div class="otptitle"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                <div class="hmdate-author">
+                    <a href="{{ post.url }}">{{ post.date | date_to_long_string }}</a>
+                    <a href="{{ post.url }}"><i class="bi bi-dash"></i></a>
+                    <a href="{{ post.author }}">{{ post.author }}</a>
+                 </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>

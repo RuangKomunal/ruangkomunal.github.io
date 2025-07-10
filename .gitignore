@@ -1,5 +1,5 @@
 # Jekyll files
-_site          # The generated Jekyll site output
+_site
 _sass
-.jekyll-cache  # Jekyll's cache directory for faster builds
-.sass-cache    # Sass cache directory
+.jekyll-cache
+.sass-cache
