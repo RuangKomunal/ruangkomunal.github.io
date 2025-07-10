@@ -1,8 +1,8 @@
 # Site Settings
 title: "Ruang Komunal"
-url: ""
+url: "ruangkomunal.github.io"
 baseurl: "" 
-permalinks: "/:categories/:year/:month/:day/:title/"
+permalinks: pretty
 
 # Build Settings
 markdown: kramdown
